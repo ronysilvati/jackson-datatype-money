@@ -24,24 +24,20 @@ import org.zalando.jackson.datatype.money.CurrencyUnitSerializer;
 @RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = true, useJEE = true) 
 public class CurrencyUnitSerializer_ESTest extends CurrencyUnitSerializer_ESTest_scaffolding {
 
-  @Test(timeout = 4000)
-  public void test0()  throws Throwable  {
-      CurrencyUnitSerializer currencyUnitSerializer0 = new CurrencyUnitSerializer();
-      CurrencyUnit currencyUnit0 = mock(CurrencyUnit.class, new ViolatedAssumptionAnswer());
-      doReturn((String) null).when(currencyUnit0).getCurrencyCode();
-      // Undeclared exception!
-      try { 
-        currencyUnitSerializer0.serialize(currencyUnit0, (JsonGenerator) null, (SerializerProvider) null);
-        fail("Expecting exception: NullPointerException");
-      
-      } catch(NullPointerException e) {
-         //
-         // no message in exception (getMessage() returned null)
-         //
-         verifyException("org.zalando.jackson.datatype.money.CurrencyUnitSerializer", e);
-      }
-  }
-
+ 
+  /**
+   * COMPREENSÍVEL: Sim
+   * DE FÁCIL CRIAÇÃO: Sim
+   * IMPORTANTE PARA O CONTEXTO: Sim
+   * ----------------------------------------------------------
+   * DESCRIÇÃO: O teste em questão verifica se o método 
+   * acceptJsonFormatVisitor realmente gera uma exceção ao
+   * receber como parâmetro um JsonFormatVisitorWrapper, sendo que
+   * dentro do método esse parâmetro não é tratado como nulo, ou
+   * seja: Ao entrar no método, um método do parâmetro é chamado,
+   * gerando um NullPointerException quando o parâmetro é nulo.
+   * ----------------------------------------------------------
+  */
   @Test(timeout = 4000)
   public void test1()  throws Throwable  {
       CurrencyUnitSerializer currencyUnitSerializer0 = new CurrencyUnitSerializer();
@@ -59,6 +55,16 @@ public class CurrencyUnitSerializer_ESTest extends CurrencyUnitSerializer_ESTest
       }
   }
 
+  /**
+   * COMPREENSÍVEL: Não
+   * DE FÁCIL CRIAÇÃO: Não
+   * IMPORTANTE PARA O CONTEXTO: Não foi possível determinar
+   * ----------------------------------------------------------
+   * DESCRIÇÃO: Não foi possível compreender o funcionamento
+   * do teste em questão. Por esse motivo não consegui determinar
+   * se teste é importante para o contexto.
+   * ----------------------------------------------------------
+  */
   @Test(timeout = 4000)
   public void test2()  throws Throwable  {
       CurrencyUnitSerializer currencyUnitSerializer0 = new CurrencyUnitSerializer();
@@ -69,6 +75,16 @@ public class CurrencyUnitSerializer_ESTest extends CurrencyUnitSerializer_ESTest
       assertFalse(currencyUnitSerializer0.usesObjectId());
   }
 
+  /**
+   * COMPREENSÍVEL: Não
+   * DE FÁCIL CRIAÇÃO: Não
+   * IMPORTANTE PARA O CONTEXTO: Não foi possível determinar
+   * ----------------------------------------------------------
+   * DESCRIÇÃO: Não foi possível compreender o funcionamento
+   * do teste em questão. Por esse motivo não consegui determinar
+   * se teste é importante para o contexto.
+   * ----------------------------------------------------------
+  */
   @Test(timeout = 4000)
   public void test3()  throws Throwable  {
       CurrencyUnitSerializer currencyUnitSerializer0 = new CurrencyUnitSerializer();
