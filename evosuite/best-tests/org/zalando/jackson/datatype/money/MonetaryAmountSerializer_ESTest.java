@@ -54,6 +54,15 @@ import org.zalando.jackson.datatype.money.MonetaryAmountSerializer;
 @RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = true, useJEE = true) 
 public class MonetaryAmountSerializer_ESTest extends MonetaryAmountSerializer_ESTest_scaffolding {
 
+  /**
+   * COMPREENSÍVEL: Sim
+   * DE FÁCIL CRIAÇÃO: Sim
+   * IMPORTANTE PARA O CONTEXTO: Sim
+   * ----------------------------------------------------------
+   * DESCRIÇÃO: Verifica se o serialize realmente falha ao tentar
+   * serializar valores nulos.
+   * ----------------------------------------------------------
+  */
   @Test(timeout = 4000)
   public void test0()  throws Throwable  {
       FieldNames fieldNames0 = FieldNames.DEFAULT;
@@ -74,6 +83,16 @@ public class MonetaryAmountSerializer_ESTest extends MonetaryAmountSerializer_ES
       }
   }
 
+  /**
+   * COMPREENSÍVEL: Não
+   * DE FÁCIL CRIAÇÃO: Não
+   * IMPORTANTE PARA O CONTEXTO: Não foi possível determinar
+   * ----------------------------------------------------------
+   * DESCRIÇÃO: A complexidade de preparação do teste não permitiu
+   * uma melhor compreensão do mesmo. Portanto não é possível determinar
+   * se o teste é importante para o contexto.
+   * ----------------------------------------------------------
+  */
   @Test(timeout = 4000)
   public void test1()  throws Throwable  {
       FieldNames fieldNames0 = FieldNames.defaults();
@@ -107,6 +126,16 @@ public class MonetaryAmountSerializer_ESTest extends MonetaryAmountSerializer_ES
       }
   }
 
+  /**
+   * COMPREENSÍVEL: Não
+   * DE FÁCIL CRIAÇÃO: Não
+   * IMPORTANTE PARA O CONTEXTO: Não foi possível determinar
+   * ----------------------------------------------------------
+   * DESCRIÇÃO: A complexidade de preparação do teste não permitiu
+   * uma melhor compreensão do mesmo. Portanto não é possível determinar
+   * se o teste é importante para o contexto.
+   * ----------------------------------------------------------
+  */
   @Test(timeout = 4000)
   public void test2()  throws Throwable  {
       FieldNames fieldNames0 = FieldNames.DEFAULT;
@@ -127,6 +156,16 @@ public class MonetaryAmountSerializer_ESTest extends MonetaryAmountSerializer_ES
       assertEquals(1, writerBasedJsonGenerator0.getOutputBuffered());
   }
 
+  /**
+   * COMPREENSÍVEL: Não
+   * DE FÁCIL CRIAÇÃO: Não
+   * IMPORTANTE PARA O CONTEXTO: Não foi possível determinar
+   * ----------------------------------------------------------
+   * DESCRIÇÃO: A complexidade de preparação do teste não permitiu
+   * uma melhor compreensão do mesmo. Portanto não é possível determinar
+   * se o teste é importante para o contexto.
+   * ----------------------------------------------------------
+  */
   @Test(timeout = 4000)
   public void test3()  throws Throwable  {
       FieldNames fieldNames0 = FieldNames.DEFAULT;
@@ -138,6 +177,18 @@ public class MonetaryAmountSerializer_ESTest extends MonetaryAmountSerializer_ES
       assertFalse(monetaryAmountSerializer0.usesObjectId());
   }
 
+  /**
+   * COMPREENSÍVEL: Não
+   * DE FÁCIL CRIAÇÃO: Não
+   * IMPORTANTE PARA O CONTEXTO: Não foi possível determinar
+   * ----------------------------------------------------------
+   * DESCRIÇÃO: A complexidade de preparação do teste não permitiu
+   * uma melhor compreensão do mesmo. Portanto não é possível determinar
+   * se o teste é importante para o contexto. Mas aparentemente
+   * o teste verifica o limite superior de um valor passado para
+   * serialização.
+   * ----------------------------------------------------------
+  */
   @Test(timeout = 4000)
   public void test4()  throws Throwable  {
       FieldNames fieldNames0 = FieldNames.DEFAULT;
@@ -153,29 +204,6 @@ public class MonetaryAmountSerializer_ESTest extends MonetaryAmountSerializer_ES
       // Undeclared exception!
       try { 
         monetaryAmountSerializer0.serializeWithType((MonetaryAmount) fastMoney0, (JsonGenerator) null, serializerProvider0, (TypeSerializer) null);
-        fail("Expecting exception: NullPointerException");
-      
-      } catch(NullPointerException e) {
-         //
-         // no message in exception (getMessage() returned null)
-         //
-         verifyException("org.zalando.jackson.datatype.money.MonetaryAmountSerializer", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test5()  throws Throwable  {
-      FieldNames fieldNames0 = FieldNames.DEFAULT;
-      AmountWriter<Money> amountWriter0 = (AmountWriter<Money>) mock(AmountWriter.class, new ViolatedAssumptionAnswer());
-      MonetaryAmountFormatFactory monetaryAmountFormatFactory0 = mock(MonetaryAmountFormatFactory.class, new ViolatedAssumptionAnswer());
-      MonetaryAmountSerializer monetaryAmountSerializer0 = new MonetaryAmountSerializer(fieldNames0, amountWriter0, monetaryAmountFormatFactory0);
-      TypeFactory typeFactory0 = TypeFactory.defaultInstance();
-      Class<RoundedMoney> class0 = RoundedMoney.class;
-      SimpleType simpleType0 = SimpleType.constructUnsafe(class0);
-      ArrayType arrayType0 = typeFactory0.constructArrayType((JavaType) simpleType0);
-      // Undeclared exception!
-      try { 
-        monetaryAmountSerializer0.acceptJsonFormatVisitor((JsonFormatVisitorWrapper) null, arrayType0);
         fail("Expecting exception: NullPointerException");
       
       } catch(NullPointerException e) {
