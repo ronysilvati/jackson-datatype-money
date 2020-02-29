@@ -20,6 +20,15 @@ import org.zalando.jackson.datatype.money.DecimalAmountWriter;
 @RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = true, useJEE = true) 
 public class DecimalAmountWriter_ESTest extends DecimalAmountWriter_ESTest_scaffolding {
 
+  /**
+   * COMPREENSÍVEL: Sim
+   * DE FÁCIL CRIAÇÃO: Sim
+   * IMPORTANTE PARA O CONTEXTO: Sim
+   * ----------------------------------------------------------
+   * DESCRIÇÃO: Verifica se o serialize realmente falha ao tentar
+   * serializar valores nulos.
+   * ----------------------------------------------------------
+  */
   @Test(timeout = 4000)
   public void test0()  throws Throwable  {
       DecimalAmountWriter decimalAmountWriter0 = new DecimalAmountWriter();
